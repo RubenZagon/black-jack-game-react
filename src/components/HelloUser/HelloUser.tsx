@@ -1,15 +1,10 @@
 import React, {FC} from 'react';
+import {Greeting} from "./styles";
 
 interface HelloUserProps {
     name:string
 }
 
-const HelloUser:FC<HelloUserProps> = ({name}) => {
-    return (
-        <div>
-            <h1>Hello, {name}</h1>
-        </div>
-    );
-};
+const HelloUser:FC<HelloUserProps> = ({name}) => <Greeting>Hello, {name}</Greeting>;
 
 export default HelloUser;
