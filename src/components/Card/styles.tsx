@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const BodyCard = styled.div`
   display: inline-block;
-  background:lightblue;
+  background: white;
   width: 150px;
   height: 220px;
   border-radius: 10px;

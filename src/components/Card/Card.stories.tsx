@@ -1,12 +1,21 @@
-import React from 'react';
+import React, {CSSProperties} from 'react';
 import Card from "./Card";
 import {number, select, withKnobs} from "@storybook/addon-knobs";
 import {withA11y} from "@storybook/addon-a11y";
 
+const styles = {
+  background:'darkgreen',
+  height:'100vh',
+  margin: '0px',
+  padding: '0px',
+};
 
 export default {
   title: 'Card',
-  decorators: [withKnobs, withA11y]
+  decorators: [
+    withKnobs,
+    withA11y,
+    (storyFn:any) => <div style={styles}> {storyFn()} </div>]
 };
 
 const numberAtb = {
