@@ -1,18 +1,11 @@
 import React, {FC} from 'react';
 import {BodyCard, Value} from "./styles";
+import {CardProps} from "./types";
 
-type StickCard = '♥' | '♠' | '♦' | '♣'
-
-interface CardProps {
-  stick: StickCard | string;
-  number: number;
-}
-
-
-const Card: FC<CardProps> = ({stick, number = '2'}) => {
+const Card: FC<CardProps> = ({stick, rank = '2'}) => {
   return (
     <BodyCard>
-      <Value color={stick}>{number}{stick}</Value>
+      <Value color={stick}>{rank}{stick}</Value>
     </BodyCard>
   );
 };

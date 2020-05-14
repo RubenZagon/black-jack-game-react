@@ -42,8 +42,10 @@ const selectAtb = {
 
 
 export const Default = () => <Card stick={select(selectAtb.label, selectAtb.options, selectAtb.defaultValue)}
-                                   number={number(numberAtb.label, numberAtb.defaultValue, numberAtb.options)}/>;
+                                   rank={number(numberAtb.label, numberAtb.defaultValue, numberAtb.options)}/>;
 
 // const RANKS =  'A,2,3,4,5,6,7,8,9,10,J,Q,K'.split(",");
 const VALUE_NUMBER =  '1,2,3,4,5,6,7,8,9,10,11,12,13'.split(",").map(value => parseInt(value));
-export const Deck = () => VALUE_NUMBER.map(rank => <Card key={rank} stick={select(selectAtb.label, selectAtb.options, selectAtb.defaultValue)} number={rank}/>);
+export const Deck = () => VALUE_NUMBER.map(rank => <Card key={rank}
+                                                         stick={select(selectAtb.label, selectAtb.options, selectAtb.defaultValue)}
+                                                         rank={rank}/>);
