@@ -5,6 +5,10 @@ interface HelloUserProps {
     name:string
 }
 
-const HelloUser:FC<HelloUserProps> = ({name}) => <Greeting>Hello, {name}</Greeting>;
+const HelloUser:FC<HelloUserProps> = ({name}) => {
+  return (
+    <Greeting aria-label={'greeting'}>Hello, {name}</Greeting>
+  )
+};
 
 export default HelloUser;
